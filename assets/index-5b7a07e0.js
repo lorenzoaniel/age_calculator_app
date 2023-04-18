@@ -116,7 +116,7 @@ Error generating stack: `+o.message+`
 			line-height: 4.8rem;	
 		}
 	}
-`),dS=({isValid:e})=>{const t=$y();return Pt(pS,{children:[re(hS,{variants:gS(t).Icon,initial:"initial",whileHover:"whileHover",children:re("img",{src:"src/assets/svg/arrow.svg"})}),re(mS,{})]})},pS=tt.div(({theme:e})=>`
+`),dS="https://lorenzoaniel.github.io/age_calculator_app/assets/arrow-15aa5536.svg",pS=({isValid:e})=>{const t=$y();return Pt(hS,{children:[re(mS,{variants:yS(t).Icon,initial:"initial",whileHover:"whileHover",children:re("img",{src:dS})}),re(gS,{})]})},hS=tt.div(({theme:e})=>`
   height: 6.4rem;
   width: 100%;
   display: flex;
@@ -127,7 +127,7 @@ Error generating stack: `+o.message+`
     height: 9.6rem;
     justify-content: flex-end;
 	}
-`),hS=tt(Ln.div)(({theme:e})=>`
+`),mS=tt(Ln.div)(({theme:e})=>`
   
   width: 6.4rem;
   height: 6.4rem;
@@ -146,7 +146,7 @@ Error generating stack: `+o.message+`
     width: 9.6rem;
     height: 9.6rem;
 	}
-`),mS=tt.div(({theme:e})=>`
+`),gS=tt.div(({theme:e})=>`
   position: absolute;
   background: ${e.colors.line};
   height: 0.1rem;
@@ -156,13 +156,13 @@ Error generating stack: `+o.message+`
   @media ${Ot.laptop} {
 		width: 72.8rem;
 	}
-`),gS=e=>({Icon:{initial:{background:e.colors.purple},whileHover:{background:e.colors.black}}}),cl=({value:e,title:t,isValid:n})=>{const r=uS(),i=E.useRef(null);return E.useEffect(()=>{const o=async()=>{await r.start({rotateX:0,transition:{type:"spring",stiffness:300,damping:10}}),r.start({rotateX:360,transition:{type:"spring",stiffness:300,damping:10}})};n&&i.current!==e&&(o(),i.current=e)},[n,e]),Pt(yS,{children:[re(vS,{animate:r,children:n?e:"--"}),re(wS,{children:t})]})},yS=tt(Ln.div)(({theme:e})=>`
+`),yS=e=>({Icon:{initial:{background:e.colors.purple},whileHover:{background:e.colors.black}}}),cl=({value:e,title:t,isValid:n})=>{const r=uS(),i=E.useRef(null);return E.useEffect(()=>{const o=async()=>{await r.start({rotateX:0,transition:{type:"spring",stiffness:300,damping:10}}),r.start({rotateX:360,transition:{type:"spring",stiffness:300,damping:10}})};n&&i.current!==e&&(o(),i.current=e)},[n,e]),Pt(vS,{children:[re(wS,{animate:r,children:n?e:"--"}),re(SS,{children:t})]})},vS=tt(Ln.div)(({theme:e})=>`
   height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   column-gap: 0.8rem;
-`),vS=tt(Ln.span)(({theme:e})=>`
+`),wS=tt(Ln.span)(({theme:e})=>`
   color: ${e.colors.purple};
   font-style: italic;
   font-weight: 800;
@@ -173,7 +173,7 @@ Error generating stack: `+o.message+`
   @media ${Ot.laptop} {
 		font-size: 10.4rem;
 	}
-`),wS=tt(Ln.span)(({theme:e})=>`
+`),SS=tt(Ln.span)(({theme:e})=>`
   color: ${e.colors.black};
   font-style: italic;
   font-weight: 800;
@@ -184,13 +184,13 @@ Error generating stack: `+o.message+`
   @media ${Ot.laptop} {
 		font-size: 10.4rem;
 	}
-`),SS=e=>{const{day:t,month:n,year:r}=e,i=new Date;let o=!isNaN(r)&&r>=1e3&&r<=i.getFullYear(),s=o&&!isNaN(n)&&n>=1&&n<=12,l=s&&!isNaN(t)&&t>=1;if(o&&s){let a;n===2?a=r%4===0&&r%100!==0||r%400===0?29:28:[4,6,9,11].includes(n)?a=30:a=31,l=l&&t>=1&&t<=a,r===i.getFullYear()&&(n>i.getMonth()+1?s=!1:n===i.getMonth()+1&&(l=l&&t<=i.getDate()))}return{validDay:l,validMonth:s,validYear:o}},fl=({errMessage:e,isValid:t})=>re(kS,{children:t?"":e}),kS=tt(Ln.span)(({theme:e})=>`
+`),kS=e=>{const{day:t,month:n,year:r}=e,i=new Date;let o=!isNaN(r)&&r>=1e3&&r<=i.getFullYear(),s=o&&!isNaN(n)&&n>=1&&n<=12,l=s&&!isNaN(t)&&t>=1;if(o&&s){let a;n===2?a=r%4===0&&r%100!==0||r%400===0?29:28:[4,6,9,11].includes(n)?a=30:a=31,l=l&&t>=1&&t<=a,r===i.getFullYear()&&(n>i.getMonth()+1?s=!1:n===i.getMonth()+1&&(l=l&&t<=i.getDate()))}return{validDay:l,validMonth:s,validYear:o}},fl=({errMessage:e,isValid:t})=>re(CS,{children:t?"":e}),CS=tt(Ln.span)(({theme:e})=>`
   color: ${e.colors.err};
   font-style: italic;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.1rem;
-`),CS=e=>{const{day:t,month:n,year:r}=e,i=new Date,o=i.getFullYear(),s=i.getMonth()+1,l=i.getDate();let a=o-r,u=s-n,c=l-t;if(c<0){u-=1;const d=new Date(o,s-1,0).getDate();c+=d}return u<0&&(a-=1,u+=12),{day:c,month:u,year:a}},xS=()=>{const[e,t]=E.useState(!1),[n,r]=E.useState({validDay:!1,validMonth:!1,validYear:!1}),[i,o]=E.useState({day:0,month:0,year:0}),[s,l]=E.useState({day:0,month:0,year:0}),a=c=>c.validDay&&c.validMonth&&c.validYear,u=(c,d)=>{const p={...i,[d]:c},g=SS(p);a(g)?l(CS(p)):l({day:0,month:0,year:0}),o(p),r(g),t(a(g))};return re(iS,{features:oS,children:re(rS,{mode:"sync",children:Pt(PS,{children:[Pt(ES,{children:[Pt(dl,{className:"day",children:[re(al,{title:"day",forLabel:"day-input",isValid:e}),re(ul,{id:"day-input",name:"day",onChange:c=>u(parseInt(c.target.value),"day"),isValid:e,placeholder:"DD"}),re(fl,{errMessage:"Must be a valid day",isValid:n.validDay})]}),Pt(dl,{className:"month",children:[re(al,{title:"month",forLabel:"month-input",isValid:e}),re(ul,{id:"month-input",name:"month",onChange:c=>u(parseInt(c.target.value),"month"),isValid:e,placeholder:"MM"}),re(fl,{errMessage:"Must be a valid month",isValid:n.validMonth})]}),Pt(dl,{className:"year",children:[re(al,{title:"year",forLabel:"year-input",isValid:e}),re(ul,{id:"year-input",name:"year",onChange:c=>u(parseInt(c.target.value),"year"),isValid:e,placeholder:"YYYY"}),re(fl,{errMessage:"Must be in the past",isValid:n.validYear})]})]}),re(dS,{isValid:e}),Pt(TS,{children:[re(cl,{value:s.year,title:"years",isValid:e}),re(cl,{value:s.month,title:"months",isValid:e}),re(cl,{value:s.day,title:"days",isValid:e})]})]})})})},PS=tt.main(({theme:e})=>`
+`),xS=e=>{const{day:t,month:n,year:r}=e,i=new Date,o=i.getFullYear(),s=i.getMonth()+1,l=i.getDate();let a=o-r,u=s-n,c=l-t;if(c<0){u-=1;const d=new Date(o,s-1,0).getDate();c+=d}return u<0&&(a-=1,u+=12),{day:c,month:u,year:a}},PS=()=>{const[e,t]=E.useState(!1),[n,r]=E.useState({validDay:!1,validMonth:!1,validYear:!1}),[i,o]=E.useState({day:0,month:0,year:0}),[s,l]=E.useState({day:0,month:0,year:0}),a=c=>c.validDay&&c.validMonth&&c.validYear,u=(c,d)=>{const p={...i,[d]:c},g=kS(p);a(g)?l(xS(p)):l({day:0,month:0,year:0}),o(p),r(g),t(a(g))};return re(iS,{features:oS,children:re(rS,{mode:"sync",children:Pt(ES,{children:[Pt(TS,{children:[Pt(dl,{className:"day",children:[re(al,{title:"day",forLabel:"day-input",isValid:e}),re(ul,{id:"day-input",name:"day",onChange:c=>u(parseInt(c.target.value),"day"),isValid:e,placeholder:"DD"}),re(fl,{errMessage:"Must be a valid day",isValid:n.validDay})]}),Pt(dl,{className:"month",children:[re(al,{title:"month",forLabel:"month-input",isValid:e}),re(ul,{id:"month-input",name:"month",onChange:c=>u(parseInt(c.target.value),"month"),isValid:e,placeholder:"MM"}),re(fl,{errMessage:"Must be a valid month",isValid:n.validMonth})]}),Pt(dl,{className:"year",children:[re(al,{title:"year",forLabel:"year-input",isValid:e}),re(ul,{id:"year-input",name:"year",onChange:c=>u(parseInt(c.target.value),"year"),isValid:e,placeholder:"YYYY"}),re(fl,{errMessage:"Must be in the past",isValid:n.validYear})]})]}),re(pS,{isValid:e}),Pt(AS,{children:[re(cl,{value:s.year,title:"years",isValid:e}),re(cl,{value:s.month,title:"months",isValid:e}),re(cl,{value:s.day,title:"days",isValid:e})]})]})})})},ES=tt.main(({theme:e})=>`
   background: ${e.background.secondary};
   height: fit-content;
   width: 34.3rem;
@@ -211,7 +211,7 @@ Error generating stack: `+o.message+`
 		padding: 5.6rem;
 		row-gap: 0rem;
   }
-`),ES=tt.section(({theme:e})=>`
+`),TS=tt.section(({theme:e})=>`
   height: fit-content;
   width: 100%;
   display: flex;
@@ -221,10 +221,10 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   row-gap: 0.4rem;
-`),TS=tt.section(({theme:e})=>`
+`),AS=tt.section(({theme:e})=>`
   height: fit-content;
   width: 100%;
-`);const AS=Fy`
+`);const _S=Fy`
   * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; //default
@@ -256,4 +256,4 @@ Error generating stack: `+o.message+`
       .attribution a { color: hsl(228, 45%, 44%); }
     }
   }
-`,an={lightgrey:"#F0F0F0",white:"#FFFFFF",grey:"#716F6F",line:"#DCDCDC",black:"#151515",purple:"#854DFF",red:"#FF5959"},_S={background:{primary:an.lightgrey,secondary:an.white},colors:{line:an.line,purple:an.purple,black:an.black,err:an.red,grey:an.grey}};pl.createRoot(document.getElementById("root")).render(re(An.StrictMode,{children:Pt(zy,{theme:_S,children:[re(AS,{}),re(xS,{})]})}));
+`,an={lightgrey:"#F0F0F0",white:"#FFFFFF",grey:"#716F6F",line:"#DCDCDC",black:"#151515",purple:"#854DFF",red:"#FF5959"},MS={background:{primary:an.lightgrey,secondary:an.white},colors:{line:an.line,purple:an.purple,black:an.black,err:an.red,grey:an.grey}};pl.createRoot(document.getElementById("root")).render(re(An.StrictMode,{children:Pt(zy,{theme:MS,children:[re(_S,{}),re(PS,{})]})}));
