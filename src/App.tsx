@@ -23,6 +23,7 @@ interface Validation {
 }
 
 const App: React.FC = () => {
+	const [initialRender, setInitialRender] = useState(true);
 	const [overAllValidation, setOverAllValidation] = useState(false);
 
 	const [isValid, setIsValid] = useState<Validation>({
@@ -48,6 +49,7 @@ const App: React.FC = () => {
 	};
 
 	const changeData = (value: number, valueType: string) => {
+		setInitialRender(false);
 		const newData: Data = {
 			...data,
 			[valueType]: value,
@@ -72,37 +74,58 @@ const App: React.FC = () => {
 				<Main>
 					<InputSection>
 						<LabelWithInput className="day">
-							<LabelInput title={"day"} forLabel={"day-input"} isValid={overAllValidation} />
+							<LabelInput
+								title={"day"}
+								forLabel={"day-input"}
+								isValid={overAllValidation || initialRender}
+							/>
 							<Input
 								id={"day-input"}
 								name={"day"}
 								onChange={(event) => changeData(parseInt(event.target.value), "day")}
-								isValid={overAllValidation}
+								isValid={overAllValidation || initialRender}
 								placeholder={"DD"}
 							/>
-							<LabelError errMessage={"Must be a valid day"} isValid={isValid.validDay} />
+							<LabelError
+								errMessage={"Must be a valid day"}
+								isValid={isValid.validDay || initialRender}
+							/>
 						</LabelWithInput>
 						<LabelWithInput className="month">
-							<LabelInput title={"month"} forLabel={"month-input"} isValid={overAllValidation} />
+							<LabelInput
+								title={"month"}
+								forLabel={"month-input"}
+								isValid={overAllValidation || initialRender}
+							/>
 							<Input
 								id={"month-input"}
 								name={"month"}
 								onChange={(event) => changeData(parseInt(event.target.value), "month")}
-								isValid={overAllValidation}
+								isValid={overAllValidation || initialRender}
 								placeholder={"MM"}
 							/>
-							<LabelError errMessage={"Must be a valid month"} isValid={isValid.validMonth} />
+							<LabelError
+								errMessage={"Must be a valid month"}
+								isValid={isValid.validMonth || initialRender}
+							/>
 						</LabelWithInput>
 						<LabelWithInput className="year">
-							<LabelInput title={"year"} forLabel={"year-input"} isValid={overAllValidation} />
+							<LabelInput
+								title={"year"}
+								forLabel={"year-input"}
+								isValid={overAllValidation || initialRender}
+							/>
 							<Input
 								id={"year-input"}
 								name={"year"}
 								onChange={(event) => changeData(parseInt(event.target.value), "year")}
-								isValid={overAllValidation}
+								isValid={overAllValidation || initialRender}
 								placeholder={"YYYY"}
 							/>
-							<LabelError errMessage={"Must be in the past"} isValid={isValid.validYear} />
+							<LabelError
+								errMessage={"Must be in the past"}
+								isValid={isValid.validYear || initialRender}
+							/>
 						</LabelWithInput>
 					</InputSection>
 					<Divider isValid={overAllValidation} />
