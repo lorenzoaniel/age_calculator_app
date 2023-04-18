@@ -2,6 +2,7 @@ import { m } from "framer-motion";
 import React from "react";
 import styled, { DefaultTheme, useTheme } from "styled-components";
 import { device } from "../../styles/breakpoints";
+import arrowSvg from "../../assets/svg/arrow.svg";
 
 interface Props {
 	isValid: boolean; //overallvalidation
@@ -13,7 +14,7 @@ const Divider: React.FC<Props> = ({ isValid }) => {
 	return (
 		<Main>
 			<Icon variants={_MotionVariants(theme).Icon} initial="initial" whileHover="whileHover">
-				<img src="src/assets/svg/arrow.svg" />
+				<img src={arrowSvg} />
 			</Icon>
 			<Line />
 		</Main>
