@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; //default
+
+    transition: font-size 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
   }
 
   html {
@@ -15,7 +17,9 @@ export const GlobalStyle = createGlobalStyle`
       height: 100%;
       background: ${(props) => props.theme.background.primary};
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
       padding: 0 1.6rem;
 
       @media ${device.laptop} {
@@ -25,6 +29,9 @@ export const GlobalStyle = createGlobalStyle`
       #root {
         font-size: 1.6rem;
       }
+
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
     }
   }
 `;
