@@ -13,7 +13,7 @@ const Divider: React.FC<Props> = ({ isValid }) => {
 	return (
 		<Main>
 			<Icon variants={_MotionVariants(theme).Icon} initial="initial" whileHover="whileHover">
-				<img src="../svg/arrow.svg" />
+				<img src="src/assets/svg/arrow.svg" />
 			</Icon>
 			<Line />
 		</Main>
