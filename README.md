@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [age calculator app](https://main.d24dp9slg2o08l.amplifyapp.com/)
+- Solution URL: [age calculator app solution](https://www.frontendmentor.io/solutions/age-calculator-app-reactjsstyledcomponentsframermotion-1-RuvHYiqu)
+- Live Site URL: [age calculator app livesite](https://lorenzoaniel.github.io/age_calculator_app/)
 
 ## My process
 
