@@ -116,7 +116,7 @@ Error generating stack: `+o.message+`
 			line-height: 4.8rem;	
 		}
 	}
-`),dS=({isValid:e})=>{const t=$y();return Pt(pS,{children:[re(hS,{variants:gS(t).Icon,initial:"initial",whileHover:"whileHover",children:re("img",{src:"../svg/arrow.svg"})}),re(mS,{})]})},pS=tt.div(({theme:e})=>`
+`),dS=({isValid:e})=>{const t=$y();return Pt(pS,{children:[re(hS,{variants:gS(t).Icon,initial:"initial",whileHover:"whileHover",children:re("img",{src:"src/assets/svg/arrow.svg"})}),re(mS,{})]})},pS=tt.div(({theme:e})=>`
   height: 6.4rem;
   width: 100%;
   display: flex;
